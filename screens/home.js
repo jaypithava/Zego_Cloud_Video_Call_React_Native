@@ -1,15 +1,23 @@
-import {Button, View} from 'react-native';
+import {Button, View, StyleSheet} from 'react-native';
 import React from 'react';
 
-const home = ({navigation}) => {
+const Home = ({navigation}) => {
   return (
-    <View>
+    <View style={styles.btnView}>
       <Button
-        title="MAke A Call"
+        title="Make A Call"
         onPress={() => navigation.navigate('Callpage')}
       />
     </View>
   );
 };
 
-export default home;
+const styles = StyleSheet.create({
+  btnView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
+
+export default Home;
